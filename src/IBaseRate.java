@@ -1,2 +1,2 @@
-public class IBaseRate {
+public interface IBaseRate {
 }
