@@ -1,2 +1,2 @@
-public class Accounts {
+public abstract class Accounts {
 }
