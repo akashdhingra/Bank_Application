@@ -17,16 +17,14 @@ public abstract class Accounts implements IBaseRate {
         System.out.println("Name: "+ name + " SSN : " + SocialSecurityNumber + " Balance: $" + balance);
 
         ++index;
-
         // Account number
         this.accountNumber = setAccountNumber();
-        System.out.println("Account No: " + accountNumber);
     }
 
     // set Account number
     private String setAccountNumber()
     {
-        String SSN_sub = SocialSecurityNumber.substring(SocialSecurityNumber.length()-2,SocialSecurityNumber.length());
+        String SSN_sub = SocialSecurityNumber.substring(SocialSecurityNumber.length()-2);
         int count = index;
         int rand = (int)(Math.random() * Math.pow(10,3));
         return SSN_sub + index + rand;
