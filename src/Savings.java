@@ -10,6 +10,7 @@ public class Savings extends Accounts {
         accountNumber = "1" + accountNumber;
         setSafetyDepositInfo();
     }
+
     private void setSafetyDepositInfo()
     {
         SafetyDepositBoxID = (int)(Math.random() * Math.pow(10,3));
