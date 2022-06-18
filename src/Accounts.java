@@ -30,6 +30,14 @@ public abstract class Accounts implements IBaseRate {
         return SSN_sub + index + rand;
     }
 
+    public void CompoundInterest()
+    {
+        double interest = balance * (rate/100);
+        balance = balance + interest;
+        System.out.println("Interest : $" + interest);
+        printBalance();
+    }
+
     // List common methods
 
     public abstract void setRate();
