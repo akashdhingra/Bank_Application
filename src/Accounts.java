@@ -9,7 +9,7 @@ public abstract class Accounts implements IBaseRate {
     protected double rate;
 
     // Constructor to set base properties and initialize the account
-    public Accounts(String name, String SSN, float deposit)
+    public Accounts(String name, String SSN, double deposit)
     {
         this.name = name;
         SocialSecurityNumber = SSN;

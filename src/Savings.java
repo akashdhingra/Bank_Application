@@ -4,7 +4,7 @@ public class Savings extends Accounts{
     private int SafetyDepositBoxKey;
 
     // Constructor to initialize settings for the savings properties
-    public Savings(String name, String SSN, float deposit){
+    public Savings(String name, String SSN, double deposit){
         super(name, SSN, deposit);
         accountNumber = "1" + accountNumber;
         setSafetyDepositInfo();
