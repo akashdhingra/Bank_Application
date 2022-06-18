@@ -10,6 +10,11 @@ public class Checking extends Accounts{
         DebitCardInfo();
     }
 
+    @Override
+    public void setRate() {
+        rate = getBaseRate() * 0.15;
+    }
+
     private void DebitCardInfo()
     {
         DebitCardNumber = (int)(Math.random() * Math.pow(10,12));
@@ -22,7 +27,8 @@ public class Checking extends Accounts{
         super.showInfo();
         System.out.println("Checking Account feature- " +
                 "\nDebit Card Number: " + DebitCardNumber +
-                "\nDebit Card Pin: " + DebitCardPin
+                "\nDebit Card Pin: " + DebitCardPin +
+                "\nBase rate: " + rate
         );
     }
 }

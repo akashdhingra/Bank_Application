@@ -18,6 +18,7 @@ public abstract class Accounts implements IBaseRate {
         ++index;
         // Account number
         this.accountNumber = setAccountNumber();
+        setRate();
     }
 
     // set Account number
@@ -30,6 +31,8 @@ public abstract class Accounts implements IBaseRate {
     }
 
     // List common methods
+
+    public abstract void setRate();
 
     public void showInfo()
     {

@@ -1,5 +1,4 @@
-public class Savings extends Accounts {
-
+public class Savings extends Accounts{
     // List properties specific for savings account
     int SafetyDepositBoxID;
     int SafetyDepositBoxKey;
@@ -9,6 +8,12 @@ public class Savings extends Accounts {
         super(name, SSN, deposit);
         accountNumber = "1" + accountNumber;
         setSafetyDepositInfo();
+    }
+
+    @Override
+    public void setRate() {
+        rate = getBaseRate() - 0.25;
+
     }
 
     private void setSafetyDepositInfo()
@@ -22,8 +27,9 @@ public class Savings extends Accounts {
     {
         super.showInfo();
         System.out.println("Savings Account feature- " +
-                "\nSafety Deposit Box ID: " + SafetyDepositBoxID +
-                "\nSafety Deposit Box Key: " + SafetyDepositBoxKey
-                );
+                        "\nSafety Deposit Box ID: " + SafetyDepositBoxID +
+                        "\nSafety Deposit Box Key: " + SafetyDepositBoxKey +
+                        "\nBase rate: " + rate
+            );
     }
 }
