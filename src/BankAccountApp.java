@@ -6,5 +6,8 @@ public class BankAccountApp {
         checkacc1.showInfo();
         System.out.println("***************");
         saveacc1.showInfo();
+        saveacc1.deposit(500);
+        saveacc1.withDraw(300);
+        saveacc1.Transfer("XYZ",400);
     }
 }
