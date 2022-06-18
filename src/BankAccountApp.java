@@ -36,7 +36,7 @@ public class BankAccountApp {
         }
         for(Accounts acc : accounts)
         {
-            System.out.println("\n**************************");
+            System.out.println("\n***************************");
             acc.showInfo();
         }
 
