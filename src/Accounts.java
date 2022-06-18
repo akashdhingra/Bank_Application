@@ -1,12 +1,12 @@
 public abstract class Accounts implements IBaseRate {
 
     // List common properties for savings and checking account
-    String name;
-    String SocialSecurityNumber;
-    String accountNumber;
-    static int index = 10000;
-    double balance;
-    double rate;
+    private String name;
+    private String SocialSecurityNumber;
+    protected String accountNumber; // available only to class and sub-class within same package
+    private static int index = 10000;
+    private double balance;
+    protected double rate;
 
     // Constructor to set base properties and initialize the account
     public Accounts(String name, String SSN, float deposit)
