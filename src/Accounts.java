@@ -34,6 +34,32 @@ public abstract class Accounts implements IBaseRate {
 
     public abstract void setRate();
 
+    public void deposit(double Amount)
+    {
+        balance = balance + Amount;
+        System.out.println("Deposit of $" + Amount + " successfully done!");
+        printBalance();
+    }
+
+    public void withDraw(double Amount)
+    {
+        balance = balance - Amount;
+        System.out.println("Withdraw of $" + Amount + " successfully done!");
+        printBalance();
+    }
+
+    public void Transfer(String toTransfer, double Amount)
+    {
+        balance = balance - Amount;
+        System.out.println("Tranfer of $" + Amount + " successfully done to "+ toTransfer);
+        printBalance();
+    }
+
+    public void printBalance()
+    {
+        System.out.println("Balance: $" + balance);
+    }
+
     public void showInfo()
     {
         System.out.println("Name: " + name +
